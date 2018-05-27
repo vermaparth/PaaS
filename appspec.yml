@@ -1,1 +1,10 @@
-Accounting/CodeDeploy/appspec.yml
+version: 0.0
+os: windows
+files:
+  - source: /Content
+    destination: C:\inetpub\wwwroot
+hooks:
+  BeforeInstall: 
+    - location: ./BeforeInstall.ps1
+  AfterInstall:
+    - location: ./AfterInstall.ps1 
